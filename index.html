@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://yubinbango.github.io/yubinbango/yubinbango.js"
+      charset="UTF-8"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/d0a601627a.js"
+      crossorigin="anonymous"
+    ></script>
+    
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>
+      <img
+        src="https://i.ibb.co/Wv8X3LVh/1.png"
+        alt="IMG-5451"
+        width="100px"
+        height="100px"
+      />
+      クールシェア宝塚2025<br />
+      景品応募フォーム
+    </h1>
+    <form
+      id="userForm1"
+      action="https://script.google.com/macros/s/AKfycbxvfA8WpXCZT5Jm_i6ckoHsIyEaJyfZBvsiF1IX5bbtU84AwgKsStYUCIuZcBhepZOCNQ/exec"
+      method="post"
+      class="h-adr"
+    >
+      <h2 class="question">①🙋‍♂お名前を入力してください</h2>
+      <input type="text" name="name" />
+      <span class="p-country-name" style="display: none">Japan</span>
+      <h2 class="question">②🏠住所を入力してください</h2>
+      <h3>💡郵便番号を入力すると町名まで自動で入力されます</h3>
+      <h3>
+        💡マンションの部屋番号なども含め《以降の住所》にご入力をお願いいたします
+      </h3>
+      〒<input
+        type="tel"
+        name="address-1"
+        id="address-1"
+        class="p-postal-code"
+        size="3"
+        maxlength="3"
+      />
+      -
+      <input
+        type="tel"
+        name="address-2"
+        id="address-2"
+        class="p-postal-code"
+        size="4"
+        maxlength="4"
+      /><br /><br />
+      <div class="address">
+        都道府県:
+        <input
+          type="text"
+          name="address-3"
+          id="address-3"
+          class="p-region"
+        /><br />
+        地区町村:
+        <input
+          type="text"
+          name="address-4"
+          id="address-4"
+          class="p-locality"
+        /><br />
+        町名:
+        <input
+          type="text"
+          name="address-5"
+          id="address-5"
+          class="p-street-address p-extended-address"
+        />
+      </div>
+      以降の住所:
+      <input type="text" name="address-6" id="address-6" required /><br />
+      <h2 class="question">③📱日中繋がる連絡先を入力してください</h2>
+
+      <input
+        type="tel"
+        name="phoneNumber-1"
+        id="phoneNumber-1"
+        class="phoneNumber"
+        size="4"
+        maxlength="4"
+        required
+      />
+      -
+      <input
+        type="tel"
+        name="phoneNumber-2"
+        id="phoneNumber-2"
+        class="phoneNumber"
+        size="4"
+        maxlength="4"
+        required
+      />
+      -
+      <input
+        type="tel"
+        name="phoneNumber-3"
+        id="phoneNumber-3"
+        class="phoneNumber"
+        size="4"
+        maxlength="4"
+        required
+      /><br /><br />
+
+      <button type="submit">送信</button>
+
+      <script>
+        // URLクエリからパラメータ取得してフォームに hidden input を追加
+        function getQueryParam(param) {
+          const urlParams = new URLSearchParams(window.location.search);
+          return urlParams.get(param);
+        }
+
+        window.onload = function () {
+          const statusNo = getQueryParam("status");
+          if (statusNo) {
+            const input = document.createElement("input");
+            input.type = "hidden";
+            input.name = "statusNo";
+            input.value = statusNo;
+            document.getElementById("userForm").appendChild(input);
+          }
+        };
+      </script>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+  
+
+    <nav>
+      <ul class="menu">
+        <li>
+          <a href="https://coolsharetakarazuka.github.io/home/" target="_self"
+            ><i class="fa-solid fa-house"></i><br /><span class="iconname"
+              >ホーム</span
+            ></a
+          >
+        </li>
+        <li>
+          <a href="https://coolsharetakarazuka.github.io/map/" target="_self"
+            ><i class="fa-solid fa-location-dot"></i><br /><span class="iconname"
+              >マップ</span
+            ></a
+          >
+        </li>
+        <li>
+          <a
+            href="
+          https://coolsharetakarazuka.github.io/how_to_play/" target="_self"
+            ><i class="fa-solid fa-list-ol"></i><br /><span class="iconname"
+              >遊び方</span
+            ></a
+          >
+        </li>
+        <li>
+          <a href="https://liff.line.me/2007302862-3mj9r7W5" target="_self"
+            ><i class="fa-solid fa-stamp"></i><br /><span class="iconname"
+              >スタンプラリー</span
+            ></a
+          >
+        </li>
+      </ul>
+    </nav>
+   
+  <style>
+        #mypage_content{
+        text-align: center;
+        }
+        .menu {
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          background: white;
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+          padding: 10px 0;
+          box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+  
+        .menu li {
+          display: inline-block;
+          text-align: center;
+        }
+  
+        .menu a {
+          text-decoration: none;
+          color: black;
+        }
+  
+        .menu a i {
+          font-size: 24px;
+        }
+  
+        .menu a span {
+          display: block;
+          font-size: 12px; /* テキストサイズ */
+          margin-top: 5px;
+        }
+  
+        @media (max-width: 768px) {
+          .menu {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+          }
+  
+          .menu li {
+            padding: 5px;
+          }
+        }
+  
+            h1 {
+          font-family: sans-serif;
+          display: flex;
+          align-items: center; /* 縦方向の中央揃え */
+          justify-content: center; /* 横方向の中央揃え */
+          text-align: center;
+          background: skyblue;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 10px;
+          font-size: 85%;
+        }
